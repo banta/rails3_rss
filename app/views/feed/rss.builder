@@ -1,7 +1,7 @@
 xml.instruct!
 
-xml.rss :version => "2.0", "xmlns:georss" => "http://www.georss.org/georss" do
- xml.channel do
+xml.rss (:version => "2.0", "xmlns:georss" => "http://www.georss.org/georss") {
+ xml.channel {
 
    xml.title       "paulsturgess.co.uk articles"
    xml.link        url_for :only_path => false, :controller => 'articles'
@@ -19,5 +19,5 @@ xml.rss :version => "2.0", "xmlns:georss" => "http://www.georss.org/georss" do
      end
    end
 
- end
-end
+ }
+}
