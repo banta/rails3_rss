@@ -1,11 +1,11 @@
-xml.instruct!
+xml.instruct! 
 
-xml.rss (:version => "2.0", "xmlns:georss" => "http://www.georss.org/georss") {
- xml.channel {
+xml.rss :version => "2.0", "xmlns:georss" => "http://www.georss.org/georss" do
+ xml.channel do
 
-   xml.title       "paulsturgess.co.uk articles"
+   xml.title       "Banta Bernarard"
    xml.link        url_for :only_path => false, :controller => 'articles'
-   xml.description "paulsturgess.co.uk Ruby on Rails articles"
+   xml.description "Banta Bernarard aticles about GeoRSS"
 
    @articles.each do |article|
      xml.item do
@@ -19,5 +19,5 @@ xml.rss (:version => "2.0", "xmlns:georss" => "http://www.georss.org/georss") {
      end
    end
 
- }
-}
+ end
+end
