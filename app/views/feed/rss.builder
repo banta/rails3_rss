@@ -1,6 +1,6 @@
 xml.instruct!
 
-xml.rss "version" => "2.0", "xmlns:dc" => "http://purl.org/dc/elements/1.1/" do
+xml.rss :version => "2.0", "xmlns:georss" => "http://www.georss.org/georss" do
  xml.channel do
 
    xml.title       "paulsturgess.co.uk articles"
@@ -13,6 +13,9 @@ xml.rss "version" => "2.0", "xmlns:dc" => "http://purl.org/dc/elements/1.1/" do
        xml.link        url_for :only_path => false, :controller => 'articles', :action => 'show', :id => article.id
        xml.description article.content
        xml.guid        url_for :only_path => false, :controller => 'articles', :action => 'show', :id => article.id
+			 xml.georss :point do
+					xml.text! article.latitude.to_s + ' ' + article.longitude.to_s
+			end
      end
    end
 

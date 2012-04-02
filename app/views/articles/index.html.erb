@@ -4,6 +4,8 @@
   <tr>
     <th>Author</th>
     <th>Content</th>
+		<th>Latitude</th>
+		<th>Longitude</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,6 +15,8 @@
   <tr>
     <td><%= article.author %></td>
     <td><%= article.content %></td>
+		<td><%= article.latitude %></td>
+		<td><%= article.longitude %></td>
     <td><%= link_to 'Show', article %></td>
     <td><%= link_to 'Edit', edit_article_path(article) %></td>
     <td><%= link_to 'Destroy', article, confirm: 'Are you sure?', method: :delete %></td>
