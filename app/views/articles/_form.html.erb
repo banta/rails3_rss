@@ -11,23 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <p>
     <%= f.label :author %><br />
     <%= f.text_field :author %>
-  </div>
-  <div class="field">
+  </p>
+
+  <p>
     <%= f.label :content %><br />
-    <%= f.text_area :content %>
-  </div>
-	<div class="field">
+    <%= f.text_area :content, :rows => 3 %>
+  </p>
+	<p>
     <%= f.label :latitude %><br />
     <%= f.text_field :latitude %>
-  </div>
-	<div class="field">
+  </p>
+	<p>
     <%= f.label :longitude %><br />
     <%= f.text_field :longitude %>
-  </div>
-  <div class="actions">
+  </p>
+  <p>
     <%= f.submit %>
-  </div>
+  </p>
 <% end %>

@@ -7,6 +7,7 @@ gem 'rails', '3.2.2'
 
 gem 'pg'
 gem 'thin'
+gem 'haml-rails'
 
 #group :development do
 #	gem 'sqlite3'

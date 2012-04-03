@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+%html
+  %head
+    %title RSS | GEORSS
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+  %body
+    #header.wrap
+      %a#logo.like-btn{:href => "/"} Code For Banta
+      #tag-line
+        %h1 RAILS RSS | GEO-RSS DEMO:
+        %h2 BY BERNARD BANTA
+      #social
+        %li
+          %a#rss{:href => "http://hollow-day-9316.herokuapp.com/feed/rss"} RSS
+        %li
+          %a#fb{:href => "	http://facebook.com/bantab"}Facebook
+        %li
+          %a#yt{:href => "http://www.youtube.com/user/Bantaifyful"}YouTube
+        %li
+          %a#tw{:href => "http://www.twitter.com/bantab"} Twitter
+        %li
+          %a#mail{:href => "mailto:banta.bernard@gmail.com"}E-mail
+      #nav-wrap
+        %ul#nav.menu
+          %li
+            = link_to 'Home', root_path
+          %li
+            = link_to 'Articles', articles_path
+    %br
+    .wrap-t
+      #become-wrap.wrap.clearfix
+        = yield
+		
+    #footer
+      .wrap
+
